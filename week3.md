@@ -1,6 +1,9 @@
 Week3  What is Subject?
 =========
 
+
+
+
 지난주에 이어서 Subject에 대해 공부해 봅시당!! 전반적으로 훑어보니 Observable에 대한 이해가 Subject를 이해하는 데에 큰 도움이 될 것 같군요
 
 
@@ -46,7 +49,18 @@ Subject에는 종류가 4가지가 있습니다. 원서에 나온 간단한 정�
 
 신문 publisher 처럼 subject는 정보를 받고 이걸 subscribers에게 발행하는 역할을 합니다. 
 
+
+
 ```swift
+
+
+public func example(of description: String,
+                    action: () -> Void) {
+    print("\n— Example of:", description, "—")
+    action()
+}
+
+
 example(of: "PublishSubject"){
     let subject = PublishSubject<String>()
     }
